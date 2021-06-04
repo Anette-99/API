@@ -23,19 +23,19 @@
 
 const API_URL = "https://swapi.dev/api";
 
-const HTMLResponse = document.querySelector("#app");
-const ul = document.createElement('ul');
+const HTMLResponse = document.querySelector("#api");
+const al = document.createElement('al');
 
 fetch(`${API_URL}/planets/6/`)
     .then((response) => response.json())
     .then((planets) => {
-            let elem = document.createElement('li');
-            elem.appendChild(
+            let cons = document.createElement('li');
+            cons.appendChild(
                 document.createTextNode(` 🌍 ${planets.name} 🌥️ ${planets.climate} ⌛ ${planets.terrain} 🎥 ${planets.films}`)
             );
-            ul.appendChild(elem);
+            al.appendChild(cons);
         });
-        HTMLResponse.appendChild(ul);
+        HTMLResponse.appendChild(al);
 
 // PARA OBTENER LA INFORMACION DESEADA EN CONSOLA
 
